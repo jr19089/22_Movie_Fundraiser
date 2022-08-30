@@ -1,4 +1,4 @@
-def not_blank(question):
+def not_blank(question,error):
     valid = False
 
     while not valid:
@@ -7,8 +7,8 @@ def not_blank(question):
         if response != "":
             return response
         else:
-            print("Name Cannot Be Blank")
+            print(error)
 
 
 #main Routine
-name = not_blank("Please Enter Name:")
+name = not_blank("Please Enter Name:","This Section Cannot Be Blank")
